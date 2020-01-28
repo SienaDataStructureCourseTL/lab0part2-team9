@@ -110,7 +110,7 @@ public class ArrayManager
 
         if(location < nextAvailable)
         {
-            value = iArr[location];
+            value = igit puArr[location];
             for(int i = location; i < nextAvailable - 1; i++)
             {
                 iArr[i] = iArr[i + 1];
