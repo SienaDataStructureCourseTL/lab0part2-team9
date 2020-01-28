@@ -40,6 +40,10 @@ public class ArrayManager
     public ArrayManager(int numElements)
     {
         nextAvailable = 0;
+        iArr = new int[numElements];
+        for(int i = 0; i < numElements; i++){
+            iArr[i] = -999;
+        }
     }
 
     /**
@@ -52,8 +56,13 @@ public class ArrayManager
      */
     public void addElement(int value)
     {
-        iArr[nextAvailable] = value;
-        nextAvailable++;
+        for(int j = 0; j < iArr.length; j++){
+            if(iArr[j] == -999){
+                iArr[nextAvailable] = value;
+                nextAvailable++;
+                break;
+            }
+        }
     }
 
     /**
@@ -72,10 +81,8 @@ public class ArrayManager
     public void insertElement(int value, int location)
     {
         // Hint: there are two errors in the for loop header
-        if(nextAvailable < iArr.length && location <= nextAvailable)
-        {
-            for(int i = iArr.length; i > location; i++)
-            {
+        if(nextAvailable < iArr.length && location <= nextAvailable){
+            for(int i = iArr.length - 1; i > location - 1; i--){
                 iArr[i] = iArr[i - 1];
             }
             iArr[location] = value;
@@ -99,14 +106,14 @@ public class ArrayManager
     public int removeElement(int location)
     {
         // Hint: there are 2 errors in this method. One of the errors is in the for loop body.
-        int value;
+        int value = 0;
 
         if(location < nextAvailable)
         {
             value = iArr[location];
             for(int i = location; i < nextAvailable - 1; i++)
             {
-                iArr[i] = iArr[i - 1];
+                iArr[i] = iArr[i + 1];
             }
             nextAvailable--;
             iArr[nextAvailable] = -999;

@@ -67,7 +67,13 @@ public class ArrayPractice
      */
     public static int countLarger(Integer arr[], int value)
     {
-        return -1;
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > value){
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -80,7 +86,13 @@ public class ArrayPractice
      */
     public static int countTrue(Boolean arr[])
     {
-        return -1;
+        int count = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i]){
+                count++;
+            }
+        }
+        return count;
     }
 
     /**
@@ -95,7 +107,11 @@ public class ArrayPractice
      */
     public static Integer[] stringLengths(String arr[])
     {
-        return null;
+        Integer[] array = new Integer[arr.length];
+        for(int i = 0; i < arr.length; i++){
+            array[i] = arr[i].length();
+        }
+        return array;
     }
 
 }
