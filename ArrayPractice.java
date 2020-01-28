@@ -4,8 +4,8 @@
  * Complete each of the following methods according to the method comments.
  * DO NOT CHANGE THE METHOD HEADERS.
  *
- * @author (your names)
- * @version (a version number or a date)
+ * @author Amal Thomas 
+ * @version 1.27.2020
  */
 public class ArrayPractice
 {
@@ -17,7 +17,11 @@ public class ArrayPractice
      */
     public static double sum(Double arr[])
     {
-        return -1.0;
+        double sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            sum = sum + arr[i];   
+        }
+        return sum;
     }
 
     /**
@@ -28,9 +32,13 @@ public class ArrayPractice
      */
     public static int sum(Integer arr[])
     {
-        return -1;
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++){
+            sum = sum + arr[i];   
+        }
+        return sum;
     }
-    
+
     /**
      * Return the largest value in the array.
      * 
@@ -39,9 +47,15 @@ public class ArrayPractice
      */
     public static int largest(Integer arr[])
     {
-        return -1;
+        int largest = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > largest){
+                largest = arr[i];
+            }
+        }
+        return largest;
     }
-    
+
     /**
      * Return the number of elements in the input array that are
      * strictly larger than the input value.
@@ -55,7 +69,7 @@ public class ArrayPractice
     {
         return -1;
     }
-    
+
     /**
      * Return the number of elements in the array that have
      * a value of TRUE.
@@ -68,7 +82,7 @@ public class ArrayPractice
     {
         return -1;
     }
-    
+
     /**
      * Return an array of values that represent the lengths of
      * the string values in the input array.  For example, if
@@ -83,5 +97,5 @@ public class ArrayPractice
     {
         return null;
     }
-    
+
 }
