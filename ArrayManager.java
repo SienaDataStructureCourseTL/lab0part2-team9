@@ -15,8 +15,8 @@
  * Debug (DO NOT WRITE YOUR OWN) the methods so they work as required.  
  * Bugs may include logic errors, syntax errors, and/or runtime errors.
  *
- * @author Prof. White, modified by (your names)
- * @version Lab 0, Fall 2019
+ * @author Prof. White, modified by Amal THomas
+ * @version Lab 0, S 2019
  */
 public class ArrayManager
 {
@@ -109,8 +109,8 @@ public class ArrayManager
         int value = 0;
 
         if(location < nextAvailable)
-        {
-            value = igit puArr[location];
+         {
+            value = iArr[location];
             for(int i = location; i < nextAvailable - 1; i++)
             {
                 iArr[i] = iArr[i + 1];
